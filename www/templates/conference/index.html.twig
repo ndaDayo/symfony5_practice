@@ -17,13 +17,4 @@
         }
     </style>
 
-    <div class="example-wrapper">
-        <h2>Give your feedback!</h2>
-
-        {% for conference in conferences %}
-            <a href="{{ path('conference', {id:conference.id}) }}">
-                <h4>{{ conference }}</h4>
-            </a>
-        {% endfor %}
-    </div>
 {% endblock %}

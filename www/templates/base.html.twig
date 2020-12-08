@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<header>
+    <h1>
+        <a href="{{ path('homepage') }}">
+            Give your feedback!
+        </a>
+    </h1>
+    {% for conference in conferences %}
+        <a href="{{ path('conference', {id:conference.id}) }}">
+            <h4>{{ conference }}</h4>
+        </a>
+    {% endfor %}
+</header>
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
 </html>
