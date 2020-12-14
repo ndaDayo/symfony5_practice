@@ -13,7 +13,7 @@
         </a>
     </h1>
     {% for conference in conferences %}
-        <a href="{{ path('conference', {id:conference.id}) }}">
+        <a href="{{ path('conference', { slug :conference.slug}) }}">
             <h4>{{ conference }}</h4>
         </a>
     {% endfor %}
